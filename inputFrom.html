@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/inputStyle.css">
+    <title>Product Information</title>
+</head>
+<body>
+    <h3 class="note" id="note"></h3>
+    <form action="" class="input-from" id="from">
+        <fieldset>
+            <legend class="form-name">Product Information</legend>
+        <div class="info">
+            <div class="writing-site">
+                <div class="name">
+                    <label for="productName">Product Name</label>
+                    <input type="text" placeholder="Enter Product Name" name="productName" id="name">
+                </div>
+                <div class="catagori">
+                    <label for="productCatagori">Product Catagori</label>
+                    <select type="text" placeholder="Enter Product Catagori" name="productCatagori" id="catagori">
+                        <option value="ot item">OT Item</option>
+                        <option value="lab item">Lab Item</option>
+                        <option value="hospital furniture">Hospital Furniture</option>
+                        <option value="x-ray">X-Ray</option>
+                        <option value="ultrasound">Ultrasound</option>
+                    </select>
+                </div>
+                <div class="brand">
+                    <label for="productBrand">Product Brand</label>
+                    <input type="text" placeholder="Enter Product Brand" name="productBrand" id="brand">
+                </div>
+                <div class="model">
+                    <label for="productModel">Product Model</label>
+                    <input type="text" placeholder="Enter Product Model" name="productModel" id='model'>
+                </div>
+                <div class="orgin">
+                    <label for="productOrigin">Product Origin</label>
+                    <input type="text" placeholder="Enter Product Origin" name="productOrigin" id="origin">
+                </div>
+                <div class="description">
+                    <label for="productDescription">Product Description</label>
+                    <textarea name="productDescription" id="description" cols="30" rows="10" ></textarea>
+                </div>
+                <div class="price">
+                    <label for="productPrice">Product Price</label>
+                    <input type="text" placeholder="Enter Product Price" name="productPrice" id="price">
+                </div>
+                <div class="keyword">
+                    <label for="keyword">Keyword</label>
+                    <input type="text" placeholder="Keyword separated with ';'. " name="keyword" id="keyword">
+                </div>
+            </div>
+            <div class="image">
+                <label for="productImage">Select Image</label>
+                <div class="imageInput">
+                    <div class="img" id="Img"></div>
+                    <img src="#" alt="" id="uplodeImg">
+                    <input type="file" name="productImage" accept="image/*" class="chooseImage" id="image">
+                </div>
+                </div>
+        </div>
+        <input type="submit" class="submit" id="submit">
+        </fieldset>
+        
+    </form>
+    <script src="js/input.js"></script>
+</body>
+</html>

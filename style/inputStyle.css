@@ -1,0 +1,152 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.note{
+    text-align: center;
+    margin:10px 100px 40px 100px;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+}
+.successful{
+    display:block;
+    background-color: green;
+}
+.error{
+    display:block !important;
+    background-color: red;
+}
+.input-from{
+    display: grid;
+    padding: 10px;
+    font-size: 20px;
+    text-align: justify;
+    width: 97%;
+}
+.form-name{
+    font-size: 1em;
+    font-weight: bolder;
+}
+fieldset{
+    border : 2px solid #E8E8E8;
+}
+.info{
+    width: 100%;
+    display: flex;
+}
+.writing-site{
+    width:100% !important;
+}
+.input-from div{
+margin: 5px;
+width: 100%;
+display:block;
+}
+.input-from div input{
+    padding: 10px;
+    width: 50%;
+    text-align: left;
+    border-radius: 10px;
+    border : 2px solid #E8E8E8;
+    font-size: 0.8em;
+}
+.name input{
+    margin-left: 80px;
+}
+.catagori{
+    display: flex;
+    justify-content: justify;
+}
+
+.catagori select{
+    margin-left: 60px;
+    width: 52%;
+    padding: 10px;
+    border-radius: 10px;
+    border : 2px solid #E8E8E8;
+    font-size: 0.8em;
+}
+
+.brand input{
+    margin-left: 80px;
+}
+
+.model input{
+    margin-left: 76px;
+}
+
+.orgin input{
+    margin-left: 76px;
+}
+
+.description textarea{
+    margin-left: 40px;
+    vertical-align: text-top;
+    width: 50%;
+    height: 20vh;
+    border-radius: 10px;
+    border : 2px solid #E8E8E8;
+    padding: 5px;
+    font-size: 0.8em;
+}
+.price input{
+    margin-left: 88px;
+}
+.keyword input {
+    margin-left: 120px;
+}
+.image{
+    /* width: 20% !important; */
+    /* height: 100px !important; */
+    display: flex !important;
+    /* flex-direction: column; */
+    
+
+}
+/* .image label{
+    display: inline-block;
+} */
+/*.image input{
+    margin-left: 50px;
+    width: 20px !important; 
+    height: 100%;
+    border: none !important; 
+
+} */
+.imageInput{
+    width: 50% !important;
+    /* display: flex !important; */
+    justify-content: left !important;
+    margin-left: 90px !important;
+}
+.imageInput input:nth-last-child(2){
+    height:100px
+}
+.imageInput input:nth-last-child(1){
+    width: 300px !important;
+    border: none;
+}
+.submit{
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px;
+    border: 2px solid #E8E8E8;
+    border-radius: 10px;
+    margin-left: 48%;
+    background-color: #19B7E9;
+    color: #333333;
+    transition: 2s;
+}
+.submit:hover{
+    background-color: #007ACC;
+    color: #1E1E1E;
+}
+
+
+
+#uplodeImg{
+width:100px;
+height:100px;
+}

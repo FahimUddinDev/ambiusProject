@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css">
+    <title>AsiaMed</title>
+</head>
+<body>
+    <div class="head">
+        <div class="headContent">
+            <img src="/image/Logo/ambiusLogo.png" alt="">
+            <!-- <i>Asia<span>Med</span></i> -->
+            <div class="navbar" id="navbar">
+                <div class="menu" id="homeBtn">
+                    <button class="menuBtn"> <span>Home</span>
+                        <div class="menuBar">
+                            <div class="l1"></div>
+                            <div class="l2"></div>
+                            <div class="l3"></div>
+                        </div>
+                    </button>
+                </div>
+                <div class="menu">
+                    <button class="menuBtn"><span>Product</span>
+                        <div class="menuBar">
+                            <div class="l1"></div>
+                            <div class="l2"></div>
+                            <div class="l3"></div>
+                        </div>
+                    </button>
+                    <div class="submenu" id="productSubMenu">
+                    
+                    </div>
+                </div>
+                <div class="menu">
+                    <button class="menuBtn"><span>Service</span>
+                        <div class="menuBar">
+                            <div class="l1"></div>
+                            <div class="l2"></div>
+                            <div class="l3"></div>
+                        </div>
+                    </button>
+                </div>
+                <div class="menu">
+                    <button class="menuBtn"><span>About Us</span>
+                        <div class="menuBar">
+                            <div class="l1"></div>
+                            <div class="l2"></div>
+                            <div class="l3"></div>
+                        </div>
+                    </button>
+                </div>
+                <div class="menu">
+                    <button class="menuBtn"><span><i class="fas fa-search-plus"></i></span>
+                        <div class="menuBar">
+                            <div class="l1"></div>
+                            <div class="l2"></div>
+                            <div class="l3"></div>
+                        </div>
+                    </button>
+                    <div class="submenu searchbar">
+                        <div class="submenuSearch">
+                            <input type="text" id="searchInput">
+                            <button class="searchBtn" id="searchBtn"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <button class="menuBtn"><span><i class="fas fa-phone-volume"></i></span>
+                        <div class="menuBar">
+                            <div class="l1"></div>
+                            <div class="l2"></div>
+                            <div class="l3"></div>
+                        </div>
+                    </button>
+                    <div class="submenu contactbar">
+                        <div class="submenuContact">
+                            <button class="searchBtn" id="mailBtn"><i class="far fa-envelope"></i> Send a mail</button>
+                            <h3 class="phoneNumber"><i class="fas fa-phone-alt"></i>  +9988665566</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navBtn" id="navBtn">
+                <i class="fas fa-times cross" id="cross"></i>
+                <i id="add" class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="carousel" id="carousel">
+            <div class="carouselImg">
+                <img id="carouselImgfirst" src="/image/carusole/main_indoorplantsbannerdesktopv001.jpg" alt="">
+                <img src="image/carusole/main_vk-1-desktop-min.jpg" alt="">
+                <img src="image/carusole/main_banner-smithsonian-desktop.jpg" alt="">
+                <img src="image/carusole/main_officeplantservicebannerdesktopv003.jpg" alt="">
+                <img src="image/carusole/main_venturamagellan002desktopv001.jpg" alt="">
+            </div>
+            <div class="changeImage" id="changeImage">
+                <i class="fas fa-chevron-left" id="moveLeft"></i>
+                <i class="fas fa-chevron-right" id="moveRight"></i>
+            </div>
+            <div class="carouselRadio" id="carouselRadio">
+                <input type="radio" name="carouselBtn" id="carouselBtn1">
+                <input type="radio" name="carouselBtn" id="carouselBtn2">
+                <input type="radio" name="carouselBtn" id="carouselBtn3">
+                <input type="radio" name="carouselBtn" id="carouselBtn4">
+                <input type="radio" name="carouselBtn" id="carouselBtn5">
+            </div>
+            <div class="notation">
+                <div class="notationItem">
+                    <i class="fas fa-award"></i>
+                    <h4>Leaders in creating healthy spaces with world-class customer management and award-winning designers.</h4>
+                </div>
+                <div class="notationItem">
+                    <i class="fas fa-users"></i>
+                    <h4>Over 300 local specialists delivering the highest-quality services across North America.</h4>
+                </div>
+                <div class="notationItem">
+                    <i class="fas fa-globe-europe"></i>
+                    <h4>Decades of experience partnering with businesses to deliver local and global best practices.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="emailFull" id="emailFull">
+            <h1>YOUR <span>MESSAGE</span></h1>
+            <div class="messageDiv">
+                <label for="name">YOUR NAME (REQUIRED)</label>
+                <input type="text" name="name">
+                <label for="emailAddress"> YOUR EMAIL (REQUIRED)</label>
+                <input type="text" name='emailAddress'>
+                <label for="contact">YOUR CONTACT NUMBER</label>
+                <input type="text" name="contact">
+                <label for="subject">SUBJECT</label>
+                <input type="text" name="subject">
+                <label for="message" class="message">YOUR MESSAGE</label>
+                <input type="text" name="message" class="messageInput">
+                <div class="messageButton">
+                    <button class="messageSend">send</button>
+                    <button class="messageSend" id="closeMessage" >Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="home active" id="home">
+            <div class="namedes">
+                <h1><span>Ambius</span> is a leading <span>medical</span> equipment supplier in Bangladesh</h1>
+                <p>Trusted by over 500 loyal customers across the country, we carry more then 250 world class product belonging to 25 global leading brands.</p>
+                <div class="nameCard">
+                    <div class="card">
+                        <div class="image"> <img src="image/homeCard/clients.png" alt=""></div>
+                        <h1 id="coustomerCount">100+</h1>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="card">
+                        <div class="image"><img src="image/homeCard/products.png" alt=""></div>
+                        <h1 id='productCount'>100+</h1>
+                        <p>Products</p>
+                    </div>
+                    <div class="card">
+                        <div class="image"><img src="image/homeCard/brands.png" alt=""></div>
+                        <h1 id="principalsCount">100+</h1>
+                        <p>Principals</p>
+                    </div>
+                    <div class="card">
+                        <div class="image"><img src="image/homeCard/starts2.png" alt=""></div>
+                        <h1 id="experienceCount">100+</h1>
+                        <p>Years of Experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="weDo">
+                <h1>What <span>we do</span></h1>
+                <p>At Ambius Healthcare we  subscribe to the idea of providing bundled solutions to our clients. By catering for every step of the process, we aspire to maximize our clients' satifaction. Along with supplying cutting edge technology and brag-worthy after sales service, we also facilitate user training for our clients.</p>
+                <div class="weDoCard">
+                    <div class="card">
+                        <div class="image"><i class="fas fa-bolt"></i></div>
+                        <h1>SALES</h1>
+                        <p>With more than 250 products, 25 plus world-class brands, and expertise spanning a multitude of medical subfields, Ambius Healthcare is the leader in providing bundle solutions for hospitals in Bangladesh.</p>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fas fa-cogs"></i></div>
+                        <h1>SERVICES</h1>
+                        <p>With a highly talented service team and our sincere desire to serve, Ambius Healthcare has one of the best service records in the industry.</p>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class='fab fa-leanpub'></i></div>
+                        <h1>MEDICAL EDUCATION</h1>
+                        <p>To create a responsible and highly advanced medical sector in Bangladesh, we regularly arrange manufacture provided training for our employees and organize CME events for our customers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="principals">
+                <h1>Some of our <span>Principals</span></h1>
+                <div class="principalslogo">
+                    <img class="firstPrincipal" src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                    <img src="image/homeCard/Zimmer.png" alt="">
+                </div>
+            </div>
+            <div class="projects">
+                <h1>Some <span>of our</span> Latest Project</h1>
+                <div class="projectsDiv" id="projectsDiv">
+                    <div class="projectMove" id="moveRightp" >
+                        <i class="fas fa-angle-double-left"></i>
+                    </div>
+                    <div class="projectSlider" id="projectSlider">
+                        <div class="box" id="first-box">
+                            <div class="slide-img">
+                                <img src="image/homeCard/STSctg.jpg" alt="">
+                                <div class="overlay">
+                                    <h1 class="project-Name">New 1</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="image/carusole/main_banner-smithsonian-desktop.jpg" alt="">
+                                <div class="overlay">
+                                    <h1 class="project-Name">New 1</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="image/carusole/main_indoorplantsbannerdesktopv001.jpg" alt="">
+                                <div class="overlay">
+                                    <h1 class="project-Name">New 1</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="image/carusole/main_officeplantservicebannerdesktopv003.jpg" alt="">
+                                <div class="overlay">
+                                    <h1 class="project-Name">New 1</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="image/carusole/main_venturamagellan002desktopv001.jpg" alt="">
+                                <div class="overlay">
+                                    <h1 class="project-Name">New Last</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectMove" id="moveLeftp">
+                        <i class="fas fa-angle-double-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="customer">
+                <h1>Some <span>of our</span> Customers</h1>
+                <div class="customerDiv" id="customerDiv">
+                    <div class="projectMove" id="customerMoveLeft" >
+                        <i class="fas fa-angle-double-left"></i>
+                    </div>
+                    <div class="customerSlider" id="customerSlider">
+                        <div class="customerfull" id="customerFull">
+                            <a id = 'firstCustomer' class="customerA" href="#"><img src="image/Logo/ambiusLogo.png" alt=""></a>
+                            <a href="#" class="customerA"><img src="image/Logo/1.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/2.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/3.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/4.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/5.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/6.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/7.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/8.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/9.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/10.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/11.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/12.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/13.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/14.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/15.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/16.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/17.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/18.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/19.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/20.png" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/21.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/22.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/23.jpg" alt=""></a>
+                            <a href="#"class="customerA"><img src="image/Logo/24.png" alt=""></a>
+                        </div>
+                        
+                    </div>
+                    <div class="projectMove" id="customerMoveRight">
+                        <i class="fas fa-angle-double-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="product">
+            <div class="productContent">
+                <div class="productSideBar productSideBarHide" id="productSideBar" >
+                    <div class="productMenu productMenuOpen" id="productMenu">
+                        <i class="fa fa-bars productSidebarOpen" id="productSidebarOpen" aria-hidden="true"></i>
+                        <i class="fas fa-times productSidebarClose"id="productSidebarClose"></i>
+                    </div>
+                    <ul id="catagoriList">
+                        
+                    </ul>
+                </div>
+                <div class="productShow">
+                    <div class="searchProduct deActive" id="searchDiv">
+
+                    </div>
+                    <div class="categoryWiseProduct" id="categoryWiseProduct">
+                        
+                    </div>
+                    <div class="bestOfUs" id="bestOfUs">
+                        <h1>Best <span>Of</span> Us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="service" id="service">
+            <h1 class="serviceMainHeading">OUR PRODUCTS</h1>
+            <p>Amibus Healthcare is one of the market leader to supply medical equipment in Bangladeshi Government and Private Hospitals. We are trusted by our loyal (More than 500) customers across the country. We bring more than 250 world class (State of the Art) products belonging to 25 global leading brands (Principal).</p>
+            <h3 class="serviceHeading">Glimpse of our Products:</h3>
+            <ol>
+                <li>C-Arm System (High-End Flat Pannel Detector)</li>
+                <li>CSSD</li>
+                <li>ESWL</li>
+                <li>Endoscopy System</li>
+                <li>Hospital Furniture</li>
+                <li>Hospital Furniture</li>
+                <li>Laparoscopy System</li>
+                <li>Medical Gas Pipeline</li>
+                <li>Modular OT</li>
+                <li>Nurse Call System</li>
+                <li>Onsite Oxygen Generator</li>
+                <li>Pneumatic Tube System</li>
+                <li>Virtual Medical Simulator</li>
+                <li>Pulmonology Solution</li>
+            </ol>
+            <h1 class="serviceMainHeading">OUR SERVICES</h1>
+            <p>Here we want to express our heartfelt gratitude to our clients for the trust they have been placing on us in our present position. Since 2006 over one hundred major European, American and international companies have been our principals. We have proven our Business Relation expertise and experiences in a number of esteemed health care organizations and provided technical consulting on a different number of issues and topics. We believe that the length of our long journeys have proved our effect positive to our clients (in different aspects to the local business zone).</p>
+            <ul>
+                <li>Media Relations</li>
+                <li>Internet Relations</li>
+                <li>Crisis Management</li>
+                <li>Corporate Social Responsibility</li>
+                <li>Public Affairs</li>
+                <li>Business Relation Strategy Consulting</li>
+                <li>Brand Building</li>
+                <li>Business Relation Tools & Support.</li>
+            </ul>
+            <h1 class="serviceMainHeading">EDUCATION</h1>
+            <p>ANIFCO Healthcare has been contributing to the professional and ethical development of the health sector field. It has been participating in different international symposiums/workshops/conferences/fairs/CME’s (Continuing Medical Education) and transferring different views in respect to the needs of our country. Since its establishment in 2006, its activities are governed by the ethical principles of valued clients of our country as well as the conviction to provide extreme supports at any given moment.<br><br>We received appreciation letters from different esteemed Government & Non-government health care organizations for supplying the heath care equipment in due time and handover the same to user-end with their maximum satisfaction. Anifco also earned the Excellence Award honor for outstanding achievement and yearly commitments to them.</p>
+            <h3 class="serviceHeading">List of recent nominated and awarded projects in different aspects:</h3>
+            <ul>
+                <li>Principal Award</li>
+                <li>UNICEF Agreement</li>
+                <li>ADB Tender Award</li>
+                <li>World Bank Tender Award</li>
+                <li>Outstanding Performance Award from renowned Private Health Support Organization</li>
+            </ul>
+        </div>
+        <div class="aboutUs" id="aboutus">
+            <h1 class="teamMainHeading">OUR TEAM</h1>
+            <div class="aboutUsBackground">
+                <h2 class="teamSubHeading">THE EXECUTIVE <span>TEAM</span></h2>
+                <p class="aboutTeam">Ambius Healthcare consists of a highly talented executive team with individuals boasting 25+ years of industry experience.</p>
+                <div class="teamCardDiv">
+                    <div class="teamCard">
+                        <div class="teamImage">
+                            <img src="image/homeCard/STSctg.jpg" alt="">
+                            <div class="teamImageOverlay">
+                                <h3>01804770234</h3>
+                                <h3>faysalmahamud@gmail.com</h3>
+                            </div>
+                        </div>
+                        <h1>MD: SYKET</h1>
+                        <h4>CHIEF EXECUTIVE OFFICER</h4>
+                    </div>
+                    <div class="teamCard">
+                        <div class="teamImage">
+                            <img src="image/homeCard/STSctg.jpg" alt="">
+                            <div class="teamImageOverlay">
+                                <h3>01804770234</h3>
+                                <h3>faysalmahamud@gmail.com</h3>
+                            </div>
+                        </div>
+                        <h1>MD:BOTKA</h1>
+                        <h4>DIRECTOR-ACCOUNTS</h4>
+                    </div>
+                    <div class="teamCard">
+                        <div class="teamImage">
+                            <img src="image/homeCard/STSctg.jpg" alt="">
+                            <div class="teamImageOverlay">
+                                <h3>01804770234</h3>
+                                <h3>faysalmahamud@gmail.com</h3>
+                            </div>
+                        </div>
+                        <h1>MD:SAFAYAT</h1>
+                        <h4>DIRECTOR-SALES</h4>
+                    </div>
+                    <div class="teamCard">
+                        <div class="teamImage">
+                            <img src="image/homeCard/STSctg.jpg" alt="">
+                            <div class="teamImageOverlay">
+                                <h3>01804770234</h3>
+                                <h3>faysalmahamud@gmail.com</h3>
+                            </div>
+                        </div>
+                        <h1>MD:KOLA</h1>
+                        <h4>GENERAL MANAGER</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutUsAddress">
+                <div class="address">
+                    <h1>OFFICE ADDRESS</h1>
+                    <p>House # 5, Road # 12,Arambug, Dhaka-1000, Bangladesh. Phone: +8802 550818-9 | Email:info@ambius.com</p>
+                </div>
+                <div class="location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.472765614904!2d90.40518361425404!3d23.730514895454164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f12ee18353%3A0x7df859160c50520d!2sAsiamed!5e0!3m2!1sen!2sbd!4v1640948859247!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="about">
+            <h1>WHY AMBIUS</h1>
+            <p>Ambius established on June 2006 is a leading medical equipment supplier in Bangladesh. Since its formation, Ambius has positively transformed the healthcare sector of the country. By distributing innovative medical technology from world-class manufacturers, Ambius aims to further propel the Bangladeshi Healthcare sector to new global heights. With more than 25 principals and faithful customers in private, public and NGO sectors, it is no surprise that Ambius leads the Bangladeshi healthcare industry in Critical Care Equipments, Medical Gas Pipeline Systems, Nurse Call Systems, Surgery Equipments, Gastroenterology Equipments, Modular Operation Theatres, Hospital Furnitures and Medical Virtual Simulators.</p>
+        </div>
+        <div class="address">
+            <h1>Address</h1>
+            <div class="location">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.472765614904!2d90.40518361425404!3d23.730514895454164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f12ee18353%3A0x7df859160c50520d!2sAsiamed!5e0!3m2!1sen!2sbd!4v1640948859247!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <p>15/2 Topkhana road, Dhaka 1000</p>
+        </div>
+        <div class="socialLink">
+            <h1>Important Link</h1>
+            <div class="linkicon">
+                <a href=""><i class="far fa-envelope"></i></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-whatsapp"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram-square"></i></a>
+                <a href=""><i class="fab fa-pinterest"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <i class='copyRight'>	&copy; All copy right reserved by Faysal Mahamud</i>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
