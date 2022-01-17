@@ -321,7 +321,7 @@ function showMore(){
         showMore[i].addEventListener('click',showMoreBtn);
     }
 }
-
+showMore();
 
 function showMoreBtn(e){
     if(e.target.innerText==='Show More'){
@@ -329,6 +329,7 @@ function showMoreBtn(e){
         e.target.parentElement.parentElement.classList.add('productCardExpand');
         e.target.parentElement.parentElement.scrollIntoView('smooth','center','center');
         e.target.innerText='Less More'
+        console.log('mmmm')
     }else{
         e.target.parentElement.previousElementSibling.lastElementChild.classList.remove('active')
         e.target.parentElement.parentElement.classList.remove('productCardExpand');
