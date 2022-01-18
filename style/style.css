@@ -44,7 +44,7 @@
 .menu{
     background: white;
     display: flex;
-    width: 200px;
+    width: 20%;
     padding: 0px 20px;
     /* align-items: center; */
     border-right: 1px solid rgba(159,166,169,1);
@@ -133,7 +133,7 @@
     border-radius: 0px 10px 10px 0px;
 }
 /* navigation bar end*/ 
-@media only screen and (max-width: 1290px) {
+@media only screen and (max-width: 1100px) {
     .cross{
         display: none !important;
     }
@@ -145,7 +145,6 @@
         position: absolute;
         top:80px;
         width:300px;
-        /* height: 100vh; */
         z-index:3;
         transition: 1s;
         right:-300px;
@@ -274,6 +273,94 @@
         padding-right: 5px;
         transition: 1s;
     }
+}
+@media only screen and (max-width: 550px) {
+    .navbar{
+        width: 200px;
+    }
+    .menu{
+        width: 100%;
+    }
+    .menu:hover>.menuBtn >.menuBar>.l1{
+        position: relative;
+        left:-130px;
+        top: -1px;
+        transform: rotate(-40deg);
+    }
+    .menu:hover>.menuBtn>.menuBar>.l3{
+        position: relative;
+        left:-130px;
+        top:3px;
+        transform: rotate(-150deg);
+    }
+    .menu:hover >.menuBtn>span{
+        position: relative;
+        left: 80px;
+    }
+    .submenu{
+        right:125%;
+        width:200px;
+    }
+    .contactbar{
+        right:100%;
+    }
+    .navBtn{
+        width: 60px;
+    }
+    .navBtnMove{
+        width: 200px !important;
+    }
+    .productMenu{
+        width:60px !important;
+        height: 70px !important;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .navbar{
+        width: 300px;
+    }
+    .menu{
+        width: 100%;
+    }
+    .menu:hover>.menuBtn >.menuBar>.l1{
+        position: relative;
+        left:-223px;
+        top: 5px;
+        transform: rotate(50deg);
+    }
+    .menu:hover>.menuBtn>.menuBar>.l3{
+        position: relative;
+        left:-210px;
+        top:-15px;
+        transform: rotate(-50deg);
+    }
+    .menu:hover >.menuBtn>span{
+        position: relative;
+        left: 180px;
+    }
+    .submenu{
+        position:absolute;
+        top:360px;
+        left:-0px;
+        width:300px;
+    }
+    .navBtnMove{
+        width: 300px !important;
+    }
+    .emailFull{
+        min-width:300px;
+        width: 95% !important; 
+        color: rgba(53, 74, 85,1);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        position:absolute;
+        top: 85px;
+        left: -60px;
+        background: white;
+        z-index: 3;
+        display: none;
+     
+     }
 }
 /* Head bar end */
 /*carousel start*/

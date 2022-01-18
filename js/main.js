@@ -65,6 +65,9 @@ function activeProfile(e){
         }
     }
     }
+    if(e.target.innerText!==''){
+        document.querySelector('#navBtn').click();
+    }
 }
 //navigation button click function end
 // carousel start 
@@ -406,6 +409,7 @@ function productSubNavWork(e){
         }
     }
     }
+    document.querySelector(`#productSubMenu`).click();
 }
 
 
@@ -415,7 +419,7 @@ document.getElementById('searchBtn').addEventListener('click',searchCard);
 document.getElementById('searchInput').addEventListener('keyup',searchInput);
 function searchInput(e){
     if(e.keyCode ===13){
-        searchCard()
+        searchCard();
     }
 }
 function searchCard(){
@@ -433,11 +437,13 @@ function searchCard(){
     let search = document.getElementById('searchInput').value.toLowerCase();
     document.getElementById(`searchDiv`).innerHTML = '<h1>Search Result</h1>';
     document.getElementById(`searchDiv`).classList.remove('deActive');
-    for(let i=0;i<all.length;i++){
-        if(all[i].keyword.find(e=>search==e)){
-            document.getElementById(`searchDiv`).appendChild(cardMaker(all[i]));
+    try{
+        for(let i=0;i<all.length;i++){
+            if(all[i].keyword.find(e=>search==e)){
+                document.getElementById(`searchDiv`).appendChild(cardMaker(all[i]));
+            }
         }
-    }
+    }catch{}
     if(document.getElementById(`searchDiv`).childElementCount<2){
         let searchResult = document.createElement('h4');
         searchResult.id='searchResult';
@@ -446,6 +452,7 @@ function searchCard(){
     }
     document.getElementById('searchInput').value ='';
     showMore();
+    document.querySelector('#navBtn').click();
 }
 
 // get best of us 
@@ -480,7 +487,6 @@ try{
 document.getElementById('mailBtn').addEventListener('click', sendMail);
 function sendMail(){
     document.getElementById('emailFull').classList.add('active');
-    document.querySelector('#navBtn').click();
 }
 
 document.getElementById('closeMessage').addEventListener('click', closeMessage);
