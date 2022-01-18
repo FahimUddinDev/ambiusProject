@@ -441,7 +441,7 @@ function searchCard(){
     try{
         for(let i=0;i<all.length;i++){
             if(all[i].keyword.find(e=>search==e)){
-                document.getElementById(`searchDiv`).appendChild(cardMaker(all[i]));
+                document.getElementById(`searchDiv`).appendChild(cardMaker(all[i],image[i]));
             }
         }
     }catch{}
