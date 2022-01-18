@@ -35,7 +35,12 @@ function activeProfile(e){
             if(e.target.innerText!==''){
                 document.querySelector(`#${e.target.innerText.toLowerCase().replace(/ /g,'')}`).classList.add('active')
             }
-        }else{
+        }else if(e.target.tagName==='DIV'){
+            if(e.target.innerText!==''){
+                document.querySelector(`#${e.target.innerText.toLowerCase().replace(/ /g,'')}`).classList.add('active')
+            }
+        }
+        else{
             if(e.target.innerText!==''){
                 document.querySelector(`#${e.target.parentElement.previousElementSibling.innerText.toLowerCase().replace(/ /g,'')}`).classList.add('active')
             }
@@ -59,15 +64,18 @@ function activeProfile(e){
         try{
             if(e.target.innerText.length<9 &&e.target.innerText.length>0 ){
                 document.getElementById(`${document.getElementById('navbar').children[i].innerText.toLowerCase().replace(/ /g,'')}`).classList.remove('active');
+
             }
         }catch{
 
         }
     }
     }
-    if(e.target.innerText!==''){
-        document.querySelector('#navBtn').click();
-    }
+    // if(e.target.innerText===''){
+    // }else if(e.target.classList[0]==='p'){}
+    // else{
+    //     document.querySelector('#navBtn').click();
+    // }
 }
 //navigation button click function end
 // carousel start 
@@ -325,8 +333,6 @@ function showMore(){
         showMore[i].addEventListener('click',showMoreBtn);
     }
 }
-showMore();
-
 function showMoreBtn(e){
     if(e.target.innerText==='Show More'){
         e.target.parentElement.previousElementSibling.lastElementChild.classList.add('active');
@@ -362,14 +368,16 @@ function sidebarWork(e){
 let productSubNav = document.querySelector(`#productSubMenu`)
 productSubNav.addEventListener('click',productSubNavWork);
 function productSubNavWork(e){
-    let fullList = e.target.parentElement.children
-    for(let i=0;i<fullList.length;i++){
-        if(e.target.innerText===fullList[i].innerText){
-            document.getElementById(`${e.target.innerText}`).parentElement.classList.add('active');
-        }else{
-            document.getElementById(`${fullList[i].innerText}`).parentElement.classList.remove('active');
+    let fullList = e.target.parentElement.children;
+    try{
+        for(let i=0;i<fullList.length;i++){
+            if(e.target.innerText===fullList[i].innerText){
+                document.getElementById(`${e.target.innerText}`).parentElement.classList.add('active');
+            }else{
+                document.getElementById(`${fullList[i].innerText}`).parentElement.classList.remove('active');
+            }
         }
-    }
+    }catch{}
     let fullNav = document.getElementById('navbar').children;
     for(let i=0;i<fullNav.length;i++){
     if(fullNav[i].innerText.toLowerCase().replace(/ /g,'')==e.target.innerText.toLowerCase().replace(/ /g,'')){
@@ -494,3 +502,4 @@ document.getElementById('closeMessage').addEventListener('click', closeMessage);
 function closeMessage(){
     document.getElementById('emailFull').classList.remove('active');
 }
+showMore();
