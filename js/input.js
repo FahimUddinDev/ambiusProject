@@ -24,7 +24,7 @@ function productSubmit(e){
      description = document.querySelector('#description').value,
      price = document.querySelector('#price').value,
      keyword = document.querySelector('#keyword').value.toLowerCase().split(';'),
-     [image] = document.getElementById('image').files;
+     image = document.getElementById('image').files;
     let products =new Product(name, catagori,brand,model,origin,description,price,keyword,image);
     if(name ===''){
         document.querySelector('#name').style.border = '2px solid red';
@@ -55,11 +55,10 @@ function productSubmit(e){
         UI.note('Please Check all field is fill correctly','error')
     }else{
         Storage.setFile(products);
+        imageSave();
         UI.note('Product update successful','successful')
         clearfield()
     }
-    // 
-    
      e.preventDefault()
 }
 
@@ -89,7 +88,6 @@ class Storage{
         let products = Storage.getFile();
         products.push(product);
         localStorage.setItem('products',JSON.stringify(products))
-        console.log(products);
     }
 };
 
@@ -104,9 +102,29 @@ class UI{
 
     }
 }
-document.getElementById('image').onchange = evt => {
-    const [file] = document.getElementById('image').files
-    if (file) {
-        document.getElementById('uplodeImg').src = URL.createObjectURL(file)
-    }
+function imageSave(){
+    image = document.getElementById('image').files;
+     const reader = new FileReader();
+     reader.addEventListener('load', ()=>{
+         document.getElementById('uplodeImg').src = `${reader.result}`
+        let images;
+        if(localStorage.getItem('images')===null){
+            images=[];
+        }else{
+            let image =localStorage.getItem('images');
+            images = JSON.parse(image);
+        }
+        images.push(reader.result);
+        localStorage.setItem('images',JSON.stringify(images));
+    });
+     reader.readAsDataURL(image[0]);
   }
+document.getElementById('image').addEventListener('change',()=>{
+    let imageView = document.getElementById('image').files;
+    const reader = new FileReader();
+    reader.addEventListener('load', ()=>{
+        document.getElementById('uplodeImg').src = `${reader.result}`
+   });
+    reader.readAsDataURL(imageView[0]);
+})
+  

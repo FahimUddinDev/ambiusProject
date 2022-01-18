@@ -285,11 +285,11 @@ makeCategory(document.querySelector('#productSubMenu'),getCategory(),'button');
 makeCategoryDiv(document.querySelector('#categoryWiseProduct'),getCategory());
 
 //make card
-function cardMaker(productInfo){
+function cardMaker(productInfo, imageInfo){
     try{
         let makeCard = document.createElement('div');
         makeCard.classList.add('productCard');
-        makeCard.innerHTML = `<img src="image/homeCard/STSctg.jpg" alt="">
+        makeCard.innerHTML = `<img src="${imageInfo}" alt="">
                                 <h1>${productInfo.name}</h1>
                                 <div class="productInfo">
                                     <p><span>Brand</span> : ${productInfo.brand} <br>
@@ -309,9 +309,10 @@ function cardMaker(productInfo){
     }catch{}
 }
 const all =JSON.parse(localStorage.getItem('products'));
+const image = JSON.parse(localStorage.getItem('images'));
 try{
     for(let i=0;i<all.length;i++){
-        document.getElementById(`${all[i].catagori.toUpperCase()}`).appendChild(cardMaker(all[i]))
+        document.getElementById(`${all[i].catagori.toUpperCase()}`).appendChild(cardMaker(all[i],image[i]));
     }
 }catch{
 
@@ -477,7 +478,7 @@ try{
         }
     }
     for(let i=0; i<bestOfUsCount.length;i++){
-        document.getElementById('bestOfUs').appendChild(cardMaker(all[bestOfUsCount[i]]));
+        document.getElementById('bestOfUs').appendChild(cardMaker(all[bestOfUsCount[i]],image[bestOfUsCount[i]]));
     }
 }catch{}
 

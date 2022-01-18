@@ -105,19 +105,8 @@ display:block;
     
 
 }
-/* .image label{
-    display: inline-block;
-} */
-/*.image input{
-    margin-left: 50px;
-    width: 20px !important; 
-    height: 100%;
-    border: none !important; 
-
-} */
 .imageInput{
     width: 50% !important;
-    /* display: flex !important; */
     justify-content: left !important;
     margin-left: 90px !important;
 }
